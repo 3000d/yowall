@@ -1,0 +1,20 @@
+{
+    "author": "Edwin Joassart <edwin@3kd.be>",
+    "name": "yowall",
+    "description": "3kd-labs Yo Wall",
+    "version": "0.1.0",
+    "homepage": "http://yowall.3kd.io",
+    "license": "GPLv2",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/3000d/yowall.git"
+    },
+
+    "dependencies": {
+        "socket.io": ">=1.0.0-pre5",
+        "forever": "",
+        "express": "3.x",
+    },
+        
+    "private": false
+}
