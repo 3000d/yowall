@@ -6,5 +6,21 @@
 </head>
 <body>
 
+<script src="/socket.io/socket.io.js"></script>
+<script>
+	var socket = io.connect();
+	socket.emit('cmd', { cmd: "init" });
+	socket.on('news', function (data) {
+		if(data.hello){
+			console.log(data);
+			Slideshow.init();
+		};
+	  if(data.add){
+	  	console.log(data);
+	  	Slideshow.pushImages(data.add);
+	  };
+	  socket.emit('ack', { received: data });
+	});
+</script>
 </body>
 </html>
