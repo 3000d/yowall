@@ -26,4 +26,3 @@ $(function() {
     return parseInt(Math.random() * 7);
   }
 });
-//# sourceMappingURL=scripts.js.map

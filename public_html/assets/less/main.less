@@ -25,10 +25,42 @@ html {
 
 ul#yo_list {
     list-style: none;
+    margin: 0;
+    padding: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    bottom: 0;
+    z-index: -1000;
+    overflow: hidden;
 
     li {
         text-align: center;
         padding: 35px 0;
         font-weight: bold;
+        -webkit-transition: all 400ms ease, opacity 300ms ease;
+        -moz-transition: all 400ms ease;
+        -ms-transition: all 400ms ease, opacity 300ms ease;
+        -o-transition: all 400ms ease, opacity 300ms ease;
+        transition: all 400ms ease, opacity 300ms ease;
+        -webkit-transform-origin: 0% 0%;
+        -moz-transform-origin: 0% 0%;
+        -ms-transform-origin: 0% 0%;
+        -o-transform-origin: 0% 0%;
+        transform-origin: 0% 0%;
+
+        &.new {
+            opacity: 0;
+            -webkit-transform: rotateY( 80deg );
+            -moz-transform: rotateY( -80deg );
+            -ms-transform: rotateY( -80deg );
+            -o-transform: rotateY( -80deg );
+            transform: rotateY( -80deg );
+        }
     }
+}
+
+#add {
+    position: fixed;
 }

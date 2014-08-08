@@ -14,6 +14,8 @@
   "dependencies": {
     "jquery": "1.11.1",
     "font-awesome": "4.1.0",
-    "stroll": "hakimel/stroll.js"
+    "stroll": "hakimel/stroll.js",
+    "normalize-css": "~3.0.1",
+    "jquery.scrollTo": "~1.4.13"
   }
 }
