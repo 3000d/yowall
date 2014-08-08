@@ -5,7 +5,7 @@
   "homepage": "http://yowall.3kd.io",
   "private": true,
   "scripts": {
-    "postinstall": "node_modules/.bin/bower install"
+    "postinstall": "./node_modules/.bin/bower install"
   },
   "engines": {
     "node": ">= 0.10.0"
