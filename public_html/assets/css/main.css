@@ -1,0 +1,38 @@
+/** COLORS **/
+.color_0 {
+  background-color: #9a59b5;
+}
+.color_1 {
+  background-color: #1bbc9b;
+}
+.color_2 {
+  background-color: #2dcc70;
+}
+.color_3 {
+  background-color: #3598db;
+}
+.color_4 {
+  background-color: #34495e;
+}
+.color_5 {
+  background-color: #16a086;
+}
+.color_6 {
+  background-color: #f1c40f;
+}
+html {
+  background-color: #000;
+  color: #fff;
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+  font-size: 40px;
+}
+ul#yo_list {
+  list-style: none;
+}
+ul#yo_list li {
+  text-align: center;
+  padding: 35px 0;
+  font-weight: bold;
+}
+/*# sourceMappingURL=main.css.map */

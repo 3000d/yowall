@@ -96,10 +96,8 @@ module.exports = function(grunt) {
         tasks: ['jshint', 'concat']
       },
       livereload: {
-        // Browser live reloading
-        // https://github.com/gruntjs/grunt-contrib-watch#live-reloading
         options: {
-          livereload: true
+          livereload: 1337
         },
         files: [
           'assets/css/main.css',
