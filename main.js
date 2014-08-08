@@ -40,7 +40,8 @@ app.get('/yo', function(req, resp){
 
 app.get('/receiveyo',function(req,resp){
   var username = req.query.username;
-
+  console.log('yo from '+username);
+  io.sockets.emit('yo',{username:username});
   resp.send('ok');
 });
 
