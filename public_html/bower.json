@@ -1,0 +1,18 @@
+{
+  "name": "YOWALL",
+  "version": "0.1.0",
+  "homepage": "http://yowall.3kd.io",
+  "authors": [
+    "Jonathan Berger <jonathan@3kd.be"
+  ],
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "assets/vendor"
+  ],
+  "dependencies": {
+    "jquery": "1.11.1",
+    "font-awesome": "4.1.0"
+  }
+}
