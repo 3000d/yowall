@@ -9,12 +9,12 @@ $(function() {
   }, 10000);
 
 //  dev: press 'a' to simulate a yo
-  $(document).on('keyup', function (e) {
-    if(e.which === 65) {
-      playYoSound();
-      addYo(Math.random().toString(36).substring(7));
-    }
-  });
+//  $(document).on('keyup', function (e) {
+//    if(e.which === 65) {
+//      playYoSound();
+//      addYo(Math.random().toString(36).substring(7));
+//    }
+//  });
 
   socket.on('yo', function (data) {
     playYoSound();
