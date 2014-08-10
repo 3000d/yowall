@@ -31,22 +31,24 @@ html {
   text-transform: uppercase;
   font-size: 40px;
 }
+body {
+  overflow: hidden;
+}
 ul#yo_list {
   list-style: none;
   margin: 0;
   padding: 0;
-  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   bottom: 0;
   z-index: -1000;
-  overflow: hidden;
 }
 ul#yo_list li {
   text-align: center;
   padding: 35px 0;
   font-weight: bold;
+  position: relative;
   -webkit-transition: all 400ms ease, opacity 300ms ease;
   -o-transition: all 400ms ease, opacity 300ms ease;
   transition: all 400ms ease, opacity 300ms ease;
@@ -61,6 +63,19 @@ ul#yo_list li.new {
   -ms-transform: rotateY(-80deg);
   -o-transform: rotateY(-80deg);
   transform: rotateY(-80deg);
+}
+ul#yo_list li small {
+  opacity: 0.5;
+  font-size: 60%;
+}
+ul#yo_list li a {
+  display: block;
+  padding: 35px 0;
+  margin: -35px 0;
+}
+ul#yo_list li a:hover {
+  background-color: #fff;
+  color: #9a59b5;
 }
 ul#yo_list a {
   color: #ffffff;

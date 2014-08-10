@@ -4,9 +4,16 @@ $(function() {
   var old_color = -1;
   var old_old_color = -1;
 
-  $("#add").on('click', function () {
-    addYo(Math.random().toString(36).substring(7));
-  });
+  setInterval(function() {
+    updateTime();
+  }, 10000);
+
+  // dev: press 'a' to simulate a yo
+//  $(document).on('keyup', function (e) {
+//    if(e.which === 65) {
+//      addYo(Math.random().toString(36).substring(7));
+//    }
+//  });
 
   socket.on('yo', function (data) {
     addYo(data.username);
@@ -19,7 +26,8 @@ $(function() {
       color = generateColorNumber();
     }
 
-    var $elmt = $('<li/>').addClass('color_' + color).addClass('new').html(username);
+    var $small = $("<small/>").attr('data-timestamp', moment().unix()).html(moment().fromNow());
+    var $elmt = $('<li/>').addClass('color_' + color).addClass('new').html(username + " ").append($small);
     $("#yo_list").prepend($elmt);
 
     setTimeout(function() {
@@ -28,6 +36,16 @@ $(function() {
 
     old_old_color = old_color;
     old_color = color;
+  }
+
+  function updateTime() {
+    $("#yo_list").find("li small").each(function() {
+      var timestamp = $(this).attr('data-timestamp');
+      var ago = moment.unix(parseInt(timestamp)).fromNow();
+      if($(this).html() !== ago) {
+        $(this).html(ago);
+      }
+    });
   }
 
   function generateColorNumber() {
