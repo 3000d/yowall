@@ -4,13 +4,13 @@ yowall
 A wall for yo's
 
 Run it with doker
-=================
+-----------------
 
 A built version lives on the hub at https://registry.hub.docker.com/u/3kdio/yowall/
 
 So you can run it from there :
 
-$ docker run --name="yowall" -e YO_API_KEY=_youryoapikey_ -e YO_SECRET=_yoursecret_ -p _IP_:_PORT_:3000 3kdio/yowall
+`$ docker run --name="yowall" -e YO_API_KEY=_youryoapikey_ -e YO_SECRET=_yoursecret_ -p _IP_:_PORT_:3000 3kdio/yowall`
 
   _youryoapikey_ => your yo api key, you'll get it at http://yoapi.justyo.co/
 
@@ -24,28 +24,30 @@ blank and remove the semicolon after the _IP_ )
 Add the callback url at the yo api website, the url is http://_yourbaseurl_/receiveyo?secret=_yoursecret_
 
 Build it yourself with docker
-=============================
+-----------------------------
+
 git clone this repository, enter it and
 
-$ docker build -t _yourname_/yowall .
+`$ docker build -t _yourname_/yowall .`
 
 then run it
 
 Run it _cowboy_ style
-=====================
+---------------------
+
   Clone this repo
   
   Enter the repo
   
   Install node & npm
   
-  Install grunt-cli & bower globaly with # npm install --silent -g grunt-cli bower
+  Install grunt-cli & bower globally with `# npm install --silent -g grunt-cli bower`
   
-  Install backend dependencies with $ npm install
+  Install backend dependencies with `$ npm install`
   
-  Install frontend dependencies with $ bower install
+  Install frontend dependencies with `$ bower install`
   
-  Compile frontend files with $ grunt
+  Compile frontend files with `$ grunt`
   
   Set environment variables :
   
@@ -53,6 +55,6 @@ Run it _cowboy_ style
   
     - YO_SECRET with a secret key
   
-  run $node main.js
+  run `$ node main.js`
 
 the app default port is 3000

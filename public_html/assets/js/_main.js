@@ -4,10 +4,6 @@ $(function() {
   var old_color = -1;
   var old_old_color = -1;
 
-  $("#add").on('click', function () {
-    addYo(Math.random().toString(36).substring(7));
-  });
-
   socket.on('yo', function (data) {
     addYo(data.username);
   });

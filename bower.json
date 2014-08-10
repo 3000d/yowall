@@ -16,6 +16,7 @@
     "font-awesome": "4.1.0",
     "stroll": "hakimel/stroll.js",
     "normalize-css": "~3.0.1",
-    "jquery.scrollTo": "~1.4.13"
+    "jquery.scrollTo": "~1.4.13",
+    "moment": "~2.8.1"
   }
 }
