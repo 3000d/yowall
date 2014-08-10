@@ -6,8 +6,8 @@ module.exports = function(grunt) {
   require('time-grunt')(grunt);
 
   var jsFileList = [
-    'assets/js/plugins/*.js',
-    'assets/js/_*.js'
+    'public_html/assets/js/plugins/*.js',
+    'public_html/assets/js/_*.js'
   ];
 
   grunt.initConfig({
@@ -17,29 +17,29 @@ module.exports = function(grunt) {
       },
       all: [
         'Gruntfile.js',
-        'assets/js/*.js',
-        '!assets/js/scripts.js',
-        '!assets/**/*.min.*'
+        'public_html/assets/js/*.js',
+        '!public_html/assets/js/scripts.js',
+        '!public_html/assets/**/*.min.*'
       ]
     },
     less: {
       dev: {
         files: {
-          'assets/css/main.css': [
-            'assets/less/main.less'
+          'public_html/assets/css/main.css': [
+            'public_html/assets/less/main.less'
           ]
         },
         options: {
           compress: false,
           sourceMap: true,
-          sourceMapFilename: 'assets/css/main.css.map',
+          sourceMapFilename: 'public_html/assets/css/main.css.map',
           sourceMapRootpath: '/'
         }
       },
       build: {
         files: {
-          'assets/css/main.min.css': [
-            'assets/less/main.less'
+          'public_html/assets/css/main.min.css': [
+            'public_html/assets/less/main.less'
           ]
         },
         options: {
@@ -54,13 +54,13 @@ module.exports = function(grunt) {
       },
       dist: {
         src: [jsFileList],
-        dest: 'assets/js/scripts.js'
+        dest: 'public_html/assets/js/scripts.js'
       }
     },
     uglify: {
       dist: {
         files: {
-          'assets/js/scripts.min.js': [jsFileList]
+          'public_html/assets/js/scripts.min.js': [jsFileList]
         }
       }
     },
@@ -71,20 +71,20 @@ module.exports = function(grunt) {
       dev: {
         options: {
           map: {
-            prev: 'assets/css/'
+            prev: 'public_html/assets/css/'
           }
         },
-        src: 'assets/css/main.css'
+        src: 'public_html/assets/css/main.css'
       },
       build: {
-        src: 'assets/css/main.min.css'
+        src: 'public_html/assets/css/main.min.css'
       }
     },
     watch: {
       less: {
         files: [
-          'assets/less/*.less',
-          'assets/less/**/*.less'
+          'public_html/assets/less/*.less',
+          'public_html/assets/less/**/*.less'
         ],
         tasks: ['less:dev', 'autoprefixer:dev']
       },
@@ -100,8 +100,8 @@ module.exports = function(grunt) {
           livereload: 1337
         },
         files: [
-          'assets/css/main.css',
-          'assets/js/scripts.js',
+          'public_html/assets/css/main.css',
+          'public_html/assets/js/scripts.js',
           '*.php'
         ]
       }

@@ -1,7 +1,11 @@
 {
-    "author": "Edwin Joassart <edwin@3kd.be>",
+    "contributors": [   
+        "Greg Berger <greg@3kd.be>",
+        "Edwin Joassart <edwin@3kd.be>",
+        "Jonathan Berger <john@3kd.be>"
+    ],
     "name": "yowall",
-    "description": "3kd-labs Yo Wall",
+    "description": "3kd-labs's Yo Wall",
     "version": "0.1.0",
     "homepage": "http://yowall.3kd.io",
     "license": "GPLv2",
@@ -9,12 +13,22 @@
         "type": "git",
         "url": "https://github.com/3000d/yowall.git"
     },
-
     "dependencies": {
         "socket.io": ">=1.0.0-pre5",
         "forever": "",
         "express": "3.x",
-        "request": ""
+        "request": "",
+        "bower": "~1.3.5",
+        "grunt": "~0.4.5",
+        "grunt-autoprefixer": "~0.8.1",
+        "grunt-contrib-concat": "~0.5.0",
+        "grunt-contrib-jshint": "~0.10.0",
+        "grunt-contrib-less": "~0.11.3",
+        "grunt-contrib-uglify": "~0.5.0",
+        "grunt-contrib-watch": "~0.6.1",
+        "load-grunt-tasks": "~0.6.0",
+        "time-grunt": "~0.3.2",
+        "grunt-concat-sourcemap": "~0.4.3"
     },
         
     "private": false
