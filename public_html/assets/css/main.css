@@ -67,6 +67,7 @@ ul#yo_list li.new {
 ul#yo_list li small {
   opacity: 0.5;
   font-size: 60%;
+  display: block;
 }
 ul#yo_list li a {
   display: block;

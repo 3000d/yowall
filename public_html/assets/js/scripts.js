@@ -8,7 +8,7 @@ $(function() {
     updateTime();
   }, 10000);
 
-  // dev: press 'a' to simulate a yo
+////  dev: press 'a' to simulate a yo
 //  $(document).on('keyup', function (e) {
 //    if(e.which === 65) {
 //      addYo(Math.random().toString(36).substring(7));
@@ -27,7 +27,8 @@ $(function() {
     }
 
     var $small = $("<small/>").attr('data-timestamp', moment().unix()).html(moment().fromNow());
-    var $elmt = $('<li/>').addClass('color_' + color).addClass('new').html(username + " ").append($small);
+    var $span = $("<span/>").html(username);
+    var $elmt = $('<li/>').addClass('color_' + color).addClass('new').append($span).append(" ").append($small);
     $("#yo_list").prepend($elmt);
 
     setTimeout(function() {
