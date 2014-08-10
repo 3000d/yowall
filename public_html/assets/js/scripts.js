@@ -4,6 +4,8 @@ $(function() {
   var old_color = -1;
   var old_old_color = -1;
 
+  var mute = false;
+
   setInterval(function() {
     updateTime();
   }, 10000);
@@ -15,6 +17,24 @@ $(function() {
       addYo(Math.random().toString(36).substring(7));
     }
   });
+
+  $('#mute').on('click', function(e) {
+    mute = !mute;
+    var $icon = $(this).find('i');
+    if(mute) {
+      $icon.removeClass('fa-volume-up').addClass('fa-volume-off');
+    } else {
+      $icon.removeClass('fa-volume-off').addClass('fa-volume-up');
+    }
+  });
+
+//  $('#fullscreen').on('click', function() {
+//    if(BigScreen.enabled) {
+//      BigScreen.toggle();
+//    } else {
+//      alert('Sorry, only for decent browsers.');
+//    }
+//  });
 
   socket.on('yo', function (data) {
     playYoSound();
@@ -52,8 +72,10 @@ $(function() {
   }
 
   function playYoSound() {
-    var yosound = new Audio('assets/mp3/yo.mp3');
-    yosound.play();
+    if(!mute) {
+      var yosound = new Audio('assets/mp3/yo.mp3');
+      yosound.play();
+    }
   }
 
   function generateColorNumber() {

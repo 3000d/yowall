@@ -7,8 +7,8 @@
     <title>YO WALL</title>
     <script src="/socket.io/socket.io.js"></script>
     <script type="text/javascript" src="assets/vendor/jquery/dist/jquery.min.js"></script>
-    <!--<script type="text/javascript" src="assets/vendor/jquery.scrollTo/jquery.scrollTo.min.js"></script>-->
     <script type="text/javascript" src="assets/vendor/moment/min/moment.min.js"></script>
+    <!--<script type="text/javascript" src="assets/vendor/BigScreen/bigscreen.min.js"></script>-->
     <script type="text/javascript" src="assets/js/scripts.js"></script>
 
     <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
@@ -18,18 +18,36 @@
     <link rel="stylesheet" href="assets/vendor/stroll/css/stroll.min.css"/>
 </head>
 <body>
-    <ul id="yo_list">
-        <li class="color_1">DEVELOPPED</li>
-        <li class="color_2">WITH A LOT OF LOVE</li>
-        <li class="color_3">BY</li>
-        <li class="color_4">3KD TEAM</li>
-        <li class="color_5">VISIT</li>
-        <li class="color_6">US :</li>
-        <li class="color_0"><a href="http://3kd.be" target="_blank">3KD.BE</a></li>
-    </ul>
+<ul id="yo_list">
+    <li class="color_1">DEVELOPPED</li>
+    <li class="color_2">WITH A LOT OF LOVE</li>
+    <li class="color_3">BY</li>
+    <li class="color_4">3KD TEAM</li>
+    <li class="color_5">VISIT</li>
+    <li class="color_6">US :</li>
+    <li class="color_0"><a href="http://3kd.be" target="_blank">3KD.BE</a></li>
+</ul>
+<ul id="controls">
+    <!--<li id="fullscreen">-->
+    <!--<a href="#" title="GO FULLSCREEN"><i class="fa fa-arrows-alt"></i></a>-->
+    <!--</li>-->
+    <li id="mute">
+        <a href="#" title="MUTE/UNMUTE SOUND"><i class="fa fa-volume-up"></i></a>
+    </li>
+    <li id="github">
+        <a href="https://github.com/3000d/yowall" title="FORK OUR REPO" target="_blank"><i class="fa fa-github"></i></a>
+    </li>
+</ul>
 
-    <audio id="yo_sound">
-        <source src="assets/mp3/yo.wav" type="audio/wav">
-    </audio>
+<!-- analytics stuff yo -->
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-53685373-2', 'auto');
+    ga('send', 'pageview');
+</script>
 </body>
 </html>
