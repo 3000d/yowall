@@ -8,12 +8,12 @@ $(function() {
     updateTime();
   }, 10000);
 
-////  dev: press 'a' to simulate a yo
-//  $(document).on('keyup', function (e) {
-//    if(e.which === 65) {
-//      addYo(Math.random().toString(36).substring(7));
-//    }
-//  });
+//  dev: press 'a' to simulate a yo
+  $(document).on('keyup', function (e) {
+    if(e.which === 65) {
+      addYo(Math.random().toString(36).substring(7));
+    }
+  });
 
   socket.on('yo', function (data) {
     addYo(data.username);
