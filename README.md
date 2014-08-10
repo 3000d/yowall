@@ -6,6 +6,10 @@ A wall for yo's
 Run it with doker
 =================
 
+A built version lives on the hub at https://registry.hub.docker.com/u/3kdio/yowall/
+
+So you can run it from there :
+
 $ docker run --name="yowall" -e YO_API_KEY=_youryoapikey_ -e YO_SECRET=_yoursecret_ -p _IP_:_PORT_:3000 3kdio/yowall
 
   _youryoapikey_ => your yo api key, you'll get it at http://yoapi.justyo.co/
