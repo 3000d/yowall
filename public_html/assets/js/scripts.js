@@ -11,11 +11,13 @@ $(function() {
 //  dev: press 'a' to simulate a yo
   $(document).on('keyup', function (e) {
     if(e.which === 65) {
+      playYoSound();
       addYo(Math.random().toString(36).substring(7));
     }
   });
 
   socket.on('yo', function (data) {
+    playYoSound();
     addYo(data.username);
   });
 
@@ -47,6 +49,11 @@ $(function() {
         $(this).html(ago);
       }
     });
+  }
+
+  function playYoSound() {
+    var yosound = new Audio('assets/mp3/yo.mp3');
+    yosound.play();
   }
 
   function generateColorNumber() {
